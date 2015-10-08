@@ -53,21 +53,31 @@ Sample Code : [link](http://geosoft.no/development/cppstyle.html)
      */
     fileName;
 
+    /* Namespace names are written in lowercase word */
+    /* DO NOT use "using namespace std" at global */
+    namespace toycc
+    {
+
+    }
+
     /* Class names are writen with CamelCasing starting with a capital */
     /* File names shoud match there class names. "ClassName.cc", NOT: "class_name.cc" */
-    class ClassName {
+    class ClassName
+    {
 
     };
 
     /* A class with a word like "HTML" is also written with CamelCasing */
     /* NOT: exportHTMLSource(); */
-    class ExportHtmlSource {
+    class ExportHtmlSource
+    {
 
     };
 
     /* Private class variables should start with an underscore suffix. */
     /* In general, the use of global variables should be avoided. */
-    class SomeClass {
+    class SomeClass
+    {
     public:
         int width;
 
@@ -79,16 +89,22 @@ Sample Code : [link](http://geosoft.no/development/cppstyle.html)
     };
 
     /* If-else statements */
-    if(a < b) {
+    if(a < b)
+    {
         doStuffFunction();
     }
 
     /* Mulit line if-else */
-    if(a > b) {
+    if(a > b)
+    {
         testFunction();
-    } else if(a > c) {
+    }
+    else if(a > c)
+    {
         basicFunction();
-    } else {
+    }
+    else
+    {
         debug();
     }
 
@@ -98,14 +114,16 @@ Sample Code : [link](http://geosoft.no/development/cppstyle.html)
 
     /* For loop. Use i, j, k, etc for iterator variables */
     /* Variables named j, k etc. should be used for nested loops only. */
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++)
+    {
         doStuff();
     }
 
     /* Complex conditional expressions must be avoided. Introduce temporary boolean variables instead */
     bool isFinished         = (elementNo < 0) || (elementNo > maxElement);
     bool isRepeatedEntry    = elementNo == lastElement;
-    if(isFinished || isRepeatedEntry) {
+    if(isFinished || isRepeatedEntry)
+    {
         doSomethingCool();
     }
 
@@ -227,9 +245,12 @@ Sample Code : [link](http://geosoft.no/development/cppstyle.html)
     /* unsigned long long   : 0 to 18446744073709551615 */
 
     /* Exception statements */
-    try {
+    try
+    {
         trySomething();
-    } catch(ExceptionName e) {
+    }
+    catch(ExceptionName e)
+    {
         cout << "[exception] " << e << endl;
     }
 ```
