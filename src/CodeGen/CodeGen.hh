@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-class CodeGen {
+class CodeGen 
+{
 public:
     void genLexicalParser(std::ostream& os);
 };
