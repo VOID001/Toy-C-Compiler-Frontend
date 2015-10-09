@@ -1,6 +1,7 @@
 Toy-C-Compiler-Frontend
 ====
-A Compiler front end to produce code for llvm backend
+A Compiler front end to produce code for llvm backend 
+[![Build Status](https://travis-ci.org/NEUP-Net-Depart/travis-toycc.svg?branch=master)](https://travis-ci.org/NEUP-Net-Depart/travis-toycc)
 
 ## Introduction
 
