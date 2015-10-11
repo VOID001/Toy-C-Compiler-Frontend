@@ -1,6 +1,8 @@
 SET(TEST_SOURCES
 	test.cc
     utils/GenericPushBack.cc
+    lexical/Lexical.cc
+    ../src/Lexical.cc
 )
 
 ADD_EXECUTABLE(toycc_test ${TEST_SOURCES})
