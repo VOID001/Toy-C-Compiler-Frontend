@@ -26,6 +26,10 @@ private:
 public:
     Lexical(std::istream& is) : input_stream_{is} {}
 
+    /**
+     * \brief discard current token and update it to next token in stream
+     * \return current token(after update).
+     */ 
     Token getNextToken()
     {
         while(true) 
@@ -49,6 +53,10 @@ public:
         }
     }
 
+    /**
+     * \brief get current token.
+     * \return current token.
+     */ 
     Token getCurToken() 
     {
         return cur_token_;
