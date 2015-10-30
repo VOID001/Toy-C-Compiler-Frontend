@@ -68,37 +68,37 @@ void dump_content(std::ostream& is)
 
     auto lmap = dfa.getMap();
 
-	is << "{" << std::endl;
-	for(size_t i = 0; i < STATE_NUM; ++i) {
-		is << "\t{" << std::endl;
-		is << "\t\t";
-		for(size_t j = 0; j < lmap[i].size() / 4 * 1; ++j) {
-			is << lmap[i][j];
-			is << ",";
-		}
-		is << std::endl << "\t\t";
-		for(size_t j = lmap[i].size() / 4 * 1; j < lmap[i].size() / 4 * 2; ++j) {
-			is << lmap[i][j];
-			is << ",";
-		}
-		is << std::endl << "\t\t";
-		for(size_t j = lmap[i].size() / 4 * 2; j < lmap[i].size() / 4 * 3; ++j) {
-			is << lmap[i][j];
-			is << ",";
-		}
-		is << std::endl << "\t\t";
-		for(size_t j = lmap[i].size() / 4 * 3; j < lmap[i].size() / 4 * 4; ++j) {
-			is << lmap[i][j];
-			if(j != CASE_NUM - 1)
-				is << ",";
-		}
-		is << std::endl;
-		is << "\t}";
-		if(i != STATE_NUM - 1)
-			is << ",";
-		is << std::endl;
-	}
-	is << "};" << std::endl;
+    is << "{" << std::endl;
+    for(size_t i = 0; i < STATE_NUM; ++i) {
+        is << "\t{" << std::endl;
+        is << "\t\t";
+        for(size_t j = 0; j < lmap[i].size() / 4 * 1; ++j) {
+            is << lmap[i][j];
+            is << ",";
+        }
+        is << std::endl << "\t\t";
+        for(size_t j = lmap[i].size() / 4 * 1; j < lmap[i].size() / 4 * 2; ++j) {
+            is << lmap[i][j];
+            is << ",";
+        }
+        is << std::endl << "\t\t";
+        for(size_t j = lmap[i].size() / 4 * 2; j < lmap[i].size() / 4 * 3; ++j) {
+            is << lmap[i][j];
+            is << ",";
+        }
+        is << std::endl << "\t\t";
+        for(size_t j = lmap[i].size() / 4 * 3; j < lmap[i].size() / 4 * 4; ++j) {
+            is << lmap[i][j];
+            if(j != CASE_NUM - 1)
+                is << ",";
+        }
+        is << std::endl;
+        is << "\t}";
+        if(i != STATE_NUM - 1)
+            is << ",";
+        is << std::endl;
+    }
+    is << "};" << std::endl;
 }
 
 int main()
