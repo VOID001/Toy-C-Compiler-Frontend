@@ -6,7 +6,7 @@
 #include <functional>
 #include "Token.hh"
 
-class Lexical {
+class Lexer {
 private:
     using state_t = unsigned short;
     using case_t = unsigned char;
@@ -52,7 +52,7 @@ private:
     };  
 
 public:
-    Lexical(std::istream& is) : input_stream_{is}, line_{0}, pos_{0} {}
+    Lexer(std::istream& is) : input_stream_{is}, line_{0}, pos_{0} {}
 
     /**
      * \brief discard current token and update it to next token in stream

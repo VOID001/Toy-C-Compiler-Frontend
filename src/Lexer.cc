@@ -1,6 +1,6 @@
-#include "lexical/Lexical.hh"
+#include "lexer/Lexer.hh"
 
-Lexical::state_t Lexical::dfa_trans_table_[][128] =
+Lexer::state_t Lexer::dfa_trans_table_[][128] =
 {
 	{
 		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

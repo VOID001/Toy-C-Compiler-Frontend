@@ -1,6 +1,6 @@
 SET(TOYCC_SRCS
     main.cc
-    Lexical.cc
+    Lexer.cc
 )
 
 SUBDIRS(

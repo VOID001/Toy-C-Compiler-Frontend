@@ -105,8 +105,8 @@ void dump_content(std::ostream& is)
 
     L(25, std::string("Uu"), 26);
     
-    is << "#include \"lexical/Lexical.hh\"" << std::endl << std::endl;
-    is << "Lexical::state_t Lexical::dfa_trans_table_[][128] =" << std::endl;
+    is << "#include \"lexer/Lexer.hh\"" << std::endl << std::endl;
+    is << "Lexer::state_t Lexer::dfa_trans_table_[][128] =" << std::endl;
 
     auto lmap = dfa.getMap();
 
@@ -145,10 +145,10 @@ void dump_content(std::ostream& is)
 
 int main()
 {
-    std::ofstream ofs{"src/Lexical.cc"};
+    std::ofstream ofs{"src/Lexer.cc"};
     if(!ofs)
     {
-        std::cerr << "can't open src/Lexical.cc" << std::endl;
+        std::cerr << "can't open src/Lexer.cc" << std::endl;
         return -1;
     }
     dump_content(ofs);
