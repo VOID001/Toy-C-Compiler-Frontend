@@ -20,6 +20,8 @@ public:
 
     void link(const S& from, const C& cas, const S& to)
     {
+        if(map_[from][cas] != S{})
+            throw std::logic_error{"try to cover previous state"};
         map_[from][cas] = to;
     }
 
@@ -27,7 +29,7 @@ public:
     void link(const S& from, CaseSet&& st, const S& to)
     {
         for(auto&& c : st)
-            map_[from][c] = to;
+            link(from, c, to);
     }
 
     void unlink(const S& from, const C& cas)
