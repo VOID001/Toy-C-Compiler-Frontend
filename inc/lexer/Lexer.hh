@@ -1,9 +1,10 @@
 #pragma once
 #include <type_traits>
-#include <iostream>
 #include <vector>
 #include <utility>
+#include <iostream>
 #include <functional>
+#include <cassert>
 #include "Token.hh"
 
 class Lexer {
@@ -118,6 +119,19 @@ private:
         cur_state_ = 1;
     }
 
-    void make_interger() {}
+    void make_interger() {
+        assert(token_buf_.size());
+        if(token_buf_[0] > '0' && token_buf_[0] <= '9')       /* eg: 123ul */
+        {
+            integer_value_ = 0;
+            for(size_t i = 0; i < token_buf_.size(); ++i)
+            {
+                if(token_buf_[i] < '0' || token_buf_[i] > '9')
+                    break;
+                integer_value_ = token_buf_[i] - '0' + integer_value_ * 10;
+            }                  
+        }
+    }
+
     void make_float() {}
 };

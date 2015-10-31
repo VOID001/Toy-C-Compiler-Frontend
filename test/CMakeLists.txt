@@ -1,7 +1,8 @@
 SET(TEST_SOURCES
 	test.cc
     utils/GenericPushBack.cc
-    lexer/Lexer.cc
+    lexer/literal.cc
+    lexer/integer.cc
     ../src/Lexer.cc
 )
 
