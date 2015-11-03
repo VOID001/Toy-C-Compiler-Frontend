@@ -13,9 +13,7 @@ public:
         INT_L, UINT_L, LONG_L, ULONG_L, FLOAT_L, DOUBLE_L
     };
 
-    Token() = default;
-
-    Token(int kind, int line, int pos)
+    Token(int kind = -1, int line = -1, int pos = -1)
         : kind_{kind}, line_{line}, pos_{pos}
     {}
 
@@ -27,11 +25,6 @@ public:
     int getPosNumber() const
     {
         return pos_;
-    }
-
-    bool operator==(const Token& t) const
-    {
-        return kind_ == t.kind_;
     }
 
     operator int()
